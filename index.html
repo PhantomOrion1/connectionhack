@@ -138,6 +138,18 @@
   .btn.primary { background: var(--ink); color: var(--bg); border-color: var(--ink); }
   .btn.primary:hover:not(:disabled) { background: var(--ink); opacity: .85; }
   .btn:disabled { opacity: .35; cursor: default; }
+  .lives { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 22px; font-size: 13px; color: var(--muted); }
+  .lives i { width: 11px; height: 11px; border-radius: 999px; background: var(--ink); transition: transform .3s, opacity .3s; }
+  .lives i.used { opacity: .15; transform: scale(.7); }
+  .result {
+    margin-top: 28px; background: var(--surface); border: 1px solid var(--line); border-radius: 20px;
+    padding: 24px 20px; text-align: center; box-shadow: var(--shadow); animation: pop .35s cubic-bezier(.2,1.4,.4,1);
+  }
+  .result h2 { margin: 0 0 4px; font-size: 20px; font-weight: 800; letter-spacing: -.02em; }
+  .result p { margin: 0 0 16px; color: var(--muted); font-size: 14px; }
+  .result .grid { font-size: 22px; line-height: 1.15; letter-spacing: 2px; margin-bottom: 18px; }
+  .done .toolbar, .done .sub, .done .row-head .check { display: none; }
+  .done .tile { cursor: default; }
   .sub { display: flex; justify-content: center; gap: 18px; margin-top: 14px; }
   .link { font-size: 13px; color: var(--muted); font-weight: 500; }
   .link:hover { color: var(--ink); }
@@ -173,6 +185,8 @@
 
   <div class="intro"><span>Drag to swap · tap to select</span><span id="meta"></span></div>
   <div class="board" id="board"><div class="empty">Loading puzzle…</div></div>
+  <div class="lives" id="lives"></div>
+  <div id="result"></div>
 
   <div class="toolbar">
     <button class="btn" id="shuffle">Shuffle</button>
@@ -180,8 +194,8 @@
     <button class="btn primary" id="group" disabled>Group</button>
   </div>
   <div class="sub">
-    <button class="link" id="reset">Reset</button>
-    <button class="link" id="reveal">Reveal answers</button>
+    <button class="link" id="reset">Reset layout</button>
+    <button class="link" id="reveal">Give up</button>
   </div>
 
   <footer>Puzzles from <a href="https://www.nytimes.com/games/connections" target="_blank" rel="noopener">NYT Connections</a>. Not affiliated with The New York Times.</footer>
@@ -203,8 +217,12 @@ const key = () => `ch:${puzzle.date}`;
 const save = () => { try { localStorage.setItem(key(), JSON.stringify(state)); } catch {} };
 
 function freshState() {
-  return { order: [...puzzle.words], labels: ["", "", "", ""], colors: [0, 0, 0, 0], solved: [null, null, null, null] };
+  return { order: [...puzzle.words], labels: ["", "", "", ""], colors: [0, 0, 0, 0], solved: [null, null, null, null], guesses: [], done: null };
 }
+const MAX_MISTAKES = 4;
+const EMOJI = ["🟨", "🟩", "🟦", "🟪"];
+const groupOf = (w) => puzzle.groups.findIndex((g) => g.words.includes(w));
+const mistakes = () => state.guesses.filter((g) => !g.every((x) => x === g[0])).length;
 
 async function init() {
   try {
@@ -224,6 +242,8 @@ async function load(date) {
   selected.clear();
   try { state = JSON.parse(localStorage.getItem(key())); } catch { state = null; }
   if (!state || state.order?.length !== 16) state = freshState();
+  state.guesses ??= [];
+  state.done ??= null;
   const i = dates.indexOf(date);
   $("#prev").disabled = i <= 0;
   $("#next").disabled = i >= dates.length - 1 || dates[i + 1] > localToday();
@@ -269,7 +289,45 @@ function render() {
     wrap.querySelector(".check").onclick = () => check(r, row);
     board.append(wrap);
   }
+  document.body.classList.toggle("done", !!state.done);
+  renderLives();
+  renderResult();
   updateButtons();
+}
+
+function renderLives() {
+  const left = MAX_MISTAKES - mistakes();
+  $("#lives").innerHTML = state.done ? "" :
+    `Mistakes remaining: ${[0, 1, 2, 3].map((i) => `<i class="${i < left ? "" : "used"}"></i>`).join("")}`;
+}
+
+function shareText() {
+  return `Connections\nPuzzle #${puzzle.id}\n` + state.guesses.map((g) => g.map((x) => EMOJI[x]).join("")).join("\n");
+}
+
+function renderResult() {
+  const el = $("#result");
+  if (!state.done) return (el.innerHTML = "");
+  const m = mistakes();
+  const won = state.done === "won";
+  const head = won ? (m === 0 ? "Perfect!" : m === 1 ? "Great!" : m === 2 ? "Solid!" : "Phew!") : "Next time!";
+  const sub = won ? `Solved with ${m} mistake${m === 1 ? "" : "s"}` : "Out of guesses. Answers revealed above.";
+  el.innerHTML = `<div class="result">
+    <h2>${head}</h2><p>${sub}</p>
+    <div class="grid">${state.guesses.map((g) => g.map((x) => EMOJI[x]).join("")).join("<br>")}</div>
+    <button class="btn primary" id="share">Copy results</button>
+  </div>`;
+  $("#share").onclick = async () => {
+    const text = shareText();
+    try {
+      await navigator.clipboard.writeText(text);
+      toast("Copied to clipboard");
+    } catch {
+      const ta = Object.assign(document.createElement("textarea"), { value: text });
+      document.body.append(ta); ta.select(); document.execCommand("copy"); ta.remove();
+      toast("Copied to clipboard");
+    }
+  };
 }
 
 function escapeHtml(s) {
@@ -305,22 +363,33 @@ function settle(r) {
 }
 
 function check(r, rowEl) {
+  if (state.done) return;
   const words = state.order.slice(r * 4, r * 4 + 4);
-  let best = 0;
-  for (let g = 0; g < 4; g++) {
-    if (state.solved.includes(g)) continue;
-    const hits = puzzle.groups[g].words.filter((w) => words.includes(w)).length;
-    if (hits === 4) {
-      state.solved[r] = g;
-      words.forEach((w) => selected.delete(w));
-      settle(r);
-      save(); render();
-      toast(state.solved.every((s) => s !== null) ? "Solved it 🎉" : "Nice!");
-      return;
-    }
-    best = Math.max(best, hits);
+  const key = [...words].sort().join("|");
+  state.tried ??= [];
+  if (state.tried.includes(key)) return toast("Already guessed!");
+  state.tried.push(key);
+  const cols = words.map(groupOf);
+  state.guesses.push(cols);
+
+  if (cols.every((g) => g === cols[0])) {
+    state.solved[r] = cols[0];
+    words.forEach((w) => selected.delete(w));
+    settle(r);
+    if (state.solved.every((s) => s !== null)) state.done = "won";
+    save(); render();
+    toast(state.done ? "Solved it 🎉" : "Nice!");
+    return;
   }
+  const best = Math.max(...[0, 1, 2, 3].map((g) => cols.filter((x) => x === g).length));
   rowEl.classList.remove("shake"); void rowEl.offsetWidth; rowEl.classList.add("shake");
+  if (mistakes() >= MAX_MISTAKES) {
+    state.done = "lost";
+    revealAll();
+    toast("Next time!");
+    return;
+  }
+  save(); renderLives();
   toast(best === 3 ? "One away…" : "Not quite");
 }
 
@@ -417,9 +486,21 @@ board.addEventListener("pointercancel", endDrag);
 $("#shuffle").onclick = shuffle;
 $("#group").onclick = groupSelected;
 $("#deselect").onclick = () => { selected.clear(); render(); };
-$("#reset").onclick = () => { if (confirm("Reset this puzzle?")) { state = freshState(); selected.clear(); save(); render(); } };
+// Resets positions, colors and labels of unsolved rows. Guesses and mistakes are kept.
+$("#reset").onclick = () => {
+  const free = [];
+  for (let i = 0; i < 16; i++) if (state.solved[Math.floor(i / 4)] === null) free.push(i);
+  const words = puzzle.words.filter((w) => free.some((i) => state.order[i] === w));
+  free.forEach((i, k) => (state.order[i] = words[k]));
+  for (let r = 0; r < 4; r++) if (state.solved[r] === null) { state.labels[r] = ""; state.colors[r] = 0; }
+  selected.clear(); save(); render();
+};
 $("#reveal").onclick = () => {
-  if (!confirm("Reveal all answers?")) return;
+  if (!confirm("Give up and reveal the answers?")) return;
+  state.done = "lost";
+  revealAll();
+};
+function revealAll() {
   puzzle.groups.forEach((g, i) => {
     const r = state.solved.indexOf(i);
     if (r !== -1) return;
@@ -432,7 +513,7 @@ $("#reveal").onclick = () => {
     state.solved[row] = i;
   });
   selected.clear(); save(); render();
-};
+}
 $("#prev").onclick = () => load(dates[dates.indexOf(puzzle.date) - 1]);
 $("#next").onclick = () => load(dates[dates.indexOf(puzzle.date) + 1]);
 document.addEventListener("keydown", (e) => {
