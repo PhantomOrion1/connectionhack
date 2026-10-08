@@ -1,0 +1,61 @@
+{
+  "date": "2026-09-12",
+  "id": 1285,
+  "editor": "Wyna Liu",
+  "words": [
+    "TURN SIGNAL",
+    "WEATHER",
+    "POSTER",
+    "BUMPER STICKER",
+    "VANITY PLATE",
+    "CURSOR",
+    "SPOILER",
+    "TROLL",
+    "SMOKE DETECTOR",
+    "FUZZY DICE",
+    "SPAMMER",
+    "NERD",
+    "RED",
+    "EYELIDS",
+    "HOOD ORNAMENT",
+    "LURKER"
+  ],
+  "groups": [
+    {
+      "title": "WAYS TO PERSONALIZE A CAR",
+      "words": [
+        "BUMPER STICKER",
+        "FUZZY DICE",
+        "HOOD ORNAMENT",
+        "VANITY PLATE"
+      ]
+    },
+    {
+      "title": "PEOPLE IN AN ONLINE FORUM",
+      "words": [
+        "LURKER",
+        "POSTER",
+        "SPAMMER",
+        "TROLL"
+      ]
+    },
+    {
+      "title": "THINGS THAT BLINK",
+      "words": [
+        "CURSOR",
+        "EYELIDS",
+        "SMOKE DETECTOR",
+        "TURN SIGNAL"
+      ]
+    },
+    {
+      "title": "___ ALERT",
+      "words": [
+        "NERD",
+        "RED",
+        "SPOILER",
+        "WEATHER"
+      ]
+    }
+  ]
+}

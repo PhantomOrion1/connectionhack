@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-06",
+  "id": 1316,
+  "editor": "Wyna Liu",
+  "words": [
+    "ADIRONDACK",
+    "KNICKKNACK",
+    "CATSKILL",
+    "HOLIDAY",
+    "COMFORT",
+    "BERKSHIRE",
+    "STABILITY",
+    "HAMPTON",
+    "WINDSOR",
+    "MERRILL",
+    "WINGBACK",
+    "DAYS",
+    "CITI",
+    "PIANOFORTE",
+    "EAMES",
+    "GOLDMAN"
+  ],
+  "groups": [
+    {
+      "title": "FINANCIAL FIRMS, FOR SHORT",
+      "words": [
+        "BERKSHIRE",
+        "CITI",
+        "GOLDMAN",
+        "MERRILL"
+      ]
+    },
+    {
+      "title": "KINDS OF CHAIRS",
+      "words": [
+        "ADIRONDACK",
+        "EAMES",
+        "WINDSOR",
+        "WINGBACK"
+      ]
+    },
+    {
+      "title": "___ INN HOTELS",
+      "words": [
+        "COMFORT",
+        "DAYS",
+        "HAMPTON",
+        "HOLIDAY"
+      ]
+    },
+    {
+      "title": "ENDING IN TALENTS",
+      "words": [
+        "CATSKILL",
+        "KNICKKNACK",
+        "PIANOFORTE",
+        "STABILITY"
+      ]
+    }
+  ]
+}

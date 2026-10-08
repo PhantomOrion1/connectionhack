@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-07",
+  "id": 1320,
+  "editor": "Wyna Liu",
+  "words": [
+    "MUSICAL",
+    "CINNAMON",
+    "TRIDENT",
+    "HOT DOG",
+    "STICKY",
+    "SQUIRREL",
+    "MONOLOGUE",
+    "PLAY",
+    "BANK",
+    "DICHOTOMY",
+    "HAMBURGER",
+    "STORE",
+    "CHOREOGRAPHY",
+    "STASH",
+    "ORCHESTRATIONS",
+    "TETRACYCLINE"
+  ],
+  "groups": [
+    {
+      "title": "SAVE FOR LATER",
+      "words": [
+        "BANK",
+        "SQUIRREL",
+        "STASH",
+        "STORE"
+      ]
+    },
+    {
+      "title": "KINDS OF BUNS",
+      "words": [
+        "CINNAMON",
+        "HAMBURGER",
+        "HOT DOG",
+        "STICKY"
+      ]
+    },
+    {
+      "title": "GREEK NUMERICAL PREFIXES",
+      "words": [
+        "DICHOTOMY",
+        "MONOLOGUE",
+        "TETRACYCLINE",
+        "TRIDENT"
+      ]
+    },
+    {
+      "title": "BEST ___ TONY AWARDS",
+      "words": [
+        "CHOREOGRAPHY",
+        "MUSICAL",
+        "ORCHESTRATIONS",
+        "PLAY"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "date": "2026-09-09",
+  "id": 1272,
+  "editor": "Wyna Liu",
+  "words": [
+    "INCOMPREHENSIBLE",
+    "ELECTROMAGNETIC",
+    "NANOTECHNOLOGY",
+    "ARACHNOPHOBIA",
+    "MICROBREWERY",
+    "BEWILDERING",
+    "PICOSECOND",
+    "HALLOWEEN",
+    "ESOTERIC",
+    "MINIVAN",
+    "OPAQUE",
+    "BRUTE",
+    "TASK",
+    "SAW",
+    "IT",
+    "G"
+  ],
+  "groups": [
+    {
+      "title": "HARD TO UNDERSTAND",
+      "words": [
+        "BEWILDERING",
+        "ESOTERIC",
+        "INCOMPREHENSIBLE",
+        "OPAQUE"
+      ]
+    },
+    {
+      "title": "WORDS WITH \"SMALL\" PREFIXES",
+      "words": [
+        "MICROBREWERY",
+        "MINIVAN",
+        "NANOTECHNOLOGY",
+        "PICOSECOND"
+      ]
+    },
+    {
+      "title": "HORROR MOVIES",
+      "words": [
+        "ARACHNOPHOBIA",
+        "HALLOWEEN",
+        "IT",
+        "SAW"
+      ]
+    },
+    {
+      "title": "WORDS BEFORE \"FORCE\"",
+      "words": [
+        "BRUTE",
+        "ELECTROMAGNETIC",
+        "G",
+        "TASK"
+      ]
+    }
+  ]
+}

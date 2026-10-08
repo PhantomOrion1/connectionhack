@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>connectionhack</title>
+<meta name="description" content="A scratchpad for the daily NYT Connections. Drag the words around and think through the groups.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='2' y='2' width='12' height='12' rx='3' fill='%23f2c94c'/><rect x='18' y='2' width='12' height='12' rx='3' fill='%2397c25d'/><rect x='2' y='18' width='12' height='12' rx='3' fill='%2392b4f2'/><rect x='18' y='18' width='12' height='12' rx='3' fill='%23b585d1'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f5f2;
+    --surface: #ffffff;
+    --tile: #ecebe6;
+    --tile-hover: #e3e2dc;
+    --ink: #16161a;
+    --muted: #8a8a92;
+    --line: #e4e3de;
+    --selected: #3a3a40;
+    --selected-ink: #ffffff;
+    --c1: #f2c94c; --c2: #97c25d; --c3: #92b4f2; --c4: #b585d1;
+    --c1-soft: #fbedc0; --c2-soft: #dcebc7; --c3-soft: #dbe6fb; --c4-soft: #ead9f3;
+    --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.06);
+    --radius: 14px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111114;
+      --surface: #1a1a1f;
+      --tile: #24242b;
+      --tile-hover: #2d2d35;
+      --ink: #f2f2f4;
+      --muted: #7d7d88;
+      --line: #2a2a31;
+      --selected: #f2f2f4;
+      --selected-ink: #111114;
+      --c1-soft: #4a4022; --c2-soft: #2f4024; --c3-soft: #26334d; --c4-soft: #3d2c49;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100dvh;
+  }
+  button { font: inherit; color: inherit; cursor: pointer; border: 0; background: none; }
+  .wrap { max-width: 600px; margin: 0 auto; padding: 28px 16px 48px; }
+
+  header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 28px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 19px; letter-spacing: -.02em; }
+  .logo { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; width: 20px; height: 20px; }
+  .logo i { border-radius: 2.5px; }
+  .logo i:nth-child(1) { background: var(--c1); } .logo i:nth-child(2) { background: var(--c2); }
+  .logo i:nth-child(3) { background: var(--c3); } .logo i:nth-child(4) { background: var(--c4); }
+  .datenav { display: flex; align-items: center; gap: 2px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
+  .datenav button { width: 30px; height: 30px; border-radius: 999px; display: grid; place-items: center; color: var(--muted); }
+  .datenav button:hover:not(:disabled) { background: var(--tile); color: var(--ink); }
+  .datenav button:disabled { opacity: .3; cursor: default; }
+  .datenav span { font-size: 13px; font-weight: 600; padding: 0 6px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+  .intro { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; color: var(--muted); font-size: 13px; }
+  .intro b { color: var(--ink); font-weight: 600; }
+
+  .board { display: flex; flex-direction: column; gap: 14px; }
+  .row-head { display: flex; align-items: center; gap: 8px; margin-bottom: 7px; padding: 0 2px; }
+  .dot { width: 14px; height: 14px; border-radius: 999px; border: 1.5px dashed var(--muted); flex: none; transition: transform .15s; }
+  .dot:hover { transform: scale(1.15); }
+  .dot[data-c="1"] { background: var(--c1); border: 0; } .dot[data-c="2"] { background: var(--c2); border: 0; }
+  .dot[data-c="3"] { background: var(--c3); border: 0; } .dot[data-c="4"] { background: var(--c4); border: 0; }
+  .label {
+    flex: 1; min-width: 0; border: 0; background: none; outline: none;
+    font: inherit; font-size: 13px; font-weight: 500; color: var(--ink); padding: 4px 0;
+  }
+  .label::placeholder { color: var(--muted); opacity: .7; }
+  .check { font-size: 12px; font-weight: 600; color: var(--muted); padding: 4px 10px; border-radius: 999px; }
+  .check:hover { background: var(--surface); color: var(--ink); }
+
+  .row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .tile {
+    position: relative;
+    aspect-ratio: 1.25 / 1;
+    background: var(--tile);
+    border-radius: var(--radius);
+    display: grid; place-items: center;
+    padding: 6px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.1;
+    letter-spacing: .01em;
+    font-size: clamp(11px, 3.4vw, 16px);
+    user-select: none; -webkit-user-select: none;
+    touch-action: none;
+    cursor: grab;
+    word-break: break-word;
+    transition: background .15s, transform .15s, box-shadow .15s, color .15s;
+  }
+  .tile.long { font-size: clamp(9px, 2.6vw, 13px); }
+  .tile:hover { background: var(--tile-hover); }
+  .row[data-c="1"] .tile { background: var(--c1-soft); } .row[data-c="2"] .tile { background: var(--c2-soft); }
+  .row[data-c="3"] .tile { background: var(--c3-soft); } .row[data-c="4"] .tile { background: var(--c4-soft); }
+  .tile.sel, .row .tile.sel { background: var(--selected); color: var(--selected-ink); transform: scale(.96); }
+  .tile.dragging { opacity: .25; }
+  .tile.target { box-shadow: inset 0 0 0 2px var(--ink); }
+  .ghost {
+    position: fixed; z-index: 50; pointer-events: none; margin: 0;
+    box-shadow: 0 12px 32px rgba(0,0,0,.18); transform: scale(1.06) rotate(-1.5deg);
+    transition: none; cursor: grabbing;
+  }
+
+  .solved {
+    border-radius: var(--radius); padding: 18px 12px; text-align: center;
+    display: flex; flex-direction: column; justify-content: center; gap: 4px;
+    min-height: 88px; color: #16161a;
+    animation: pop .35s cubic-bezier(.2,1.4,.4,1);
+  }
+  .solved[data-c="1"] { background: var(--c1); } .solved[data-c="2"] { background: var(--c2); }
+  .solved[data-c="3"] { background: var(--c3); } .solved[data-c="4"] { background: var(--c4); }
+  .solved b { font-size: 15px; font-weight: 800; letter-spacing: .02em; text-transform: uppercase; }
+  .solved span { font-size: 13px; font-weight: 500; text-transform: uppercase; opacity: .8; }
+  .solved em { font-style: normal; font-size: 12px; opacity: .6; }
+  @keyframes pop { from { transform: scale(.94); opacity: .4; } }
+  .shake { animation: shake .35s; }
+  @keyframes shake { 20%,60% { transform: translateX(-5px); } 40%,80% { transform: translateX(5px); } }
+
+  .toolbar { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 28px; }
+  .btn {
+    height: 40px; padding: 0 18px; border-radius: 999px; font-size: 14px; font-weight: 600;
+    background: var(--surface); border: 1px solid var(--line); transition: background .15s, opacity .15s;
+  }
+  .btn:hover:not(:disabled) { background: var(--tile); }
+  .btn.primary { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .btn.primary:hover:not(:disabled) { background: var(--ink); opacity: .85; }
+  .btn:disabled { opacity: .35; cursor: default; }
+  .sub { display: flex; justify-content: center; gap: 18px; margin-top: 14px; }
+  .link { font-size: 13px; color: var(--muted); font-weight: 500; }
+  .link:hover { color: var(--ink); }
+
+  .toast {
+    position: fixed; left: 50%; top: 20px; transform: translate(-50%, -20px); opacity: 0;
+    background: var(--ink); color: var(--bg); padding: 10px 18px; border-radius: 999px;
+    font-size: 14px; font-weight: 600; pointer-events: none; transition: .25s; z-index: 60;
+  }
+  .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+  .empty { text-align: center; color: var(--muted); padding: 80px 0; font-size: 14px; }
+  footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 40px; line-height: 1.6; }
+  footer a { color: inherit; }
+  @media (max-width: 420px) {
+    .wrap { padding-top: 18px; }
+    .row { gap: 6px; }
+    .tile { border-radius: 10px; padding: 4px; }
+    .datenav span { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><div class="logo"><i></i><i></i><i></i><i></i></div>connectionhack</div>
+    <div class="datenav">
+      <button id="prev" aria-label="Previous day"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+      <span id="date">—</span>
+      <button id="next" aria-label="Next day"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+    </div>
+  </header>
+
+  <div class="intro"><span>Drag to swap · tap to select</span><span id="meta"></span></div>
+  <div class="board" id="board"><div class="empty">Loading puzzle…</div></div>
+
+  <div class="toolbar">
+    <button class="btn" id="shuffle">Shuffle</button>
+    <button class="btn" id="deselect" disabled>Deselect</button>
+    <button class="btn primary" id="group" disabled>Group</button>
+  </div>
+  <div class="sub">
+    <button class="link" id="reset">Reset</button>
+    <button class="link" id="reveal">Reveal answers</button>
+  </div>
+
+  <footer>Puzzles from <a href="https://www.nytimes.com/games/connections" target="_blank" rel="noopener">NYT Connections</a>. Not affiliated with The New York Times.</footer>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const board = $("#board");
+let dates = [], puzzle = null, state = null, selected = new Set();
+
+const localToday = () => {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+};
+const fmtDate = (iso) =>
+  new Date(iso + "T12:00:00").toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" });
+const key = () => `ch:${puzzle.date}`;
+const save = () => { try { localStorage.setItem(key(), JSON.stringify(state)); } catch {} };
+
+function freshState() {
+  return { order: [...puzzle.words], labels: ["", "", "", ""], colors: [0, 0, 0, 0], solved: [null, null, null, null] };
+}
+
+async function init() {
+  try {
+    dates = (await (await fetch("data/index.json", { cache: "no-cache" })).json()).dates;
+  } catch {
+    board.innerHTML = `<div class="empty">Couldn't load puzzles.</div>`;
+    return;
+  }
+  const want = new URLSearchParams(location.search).get("d");
+  const today = localToday();
+  const pick = dates.includes(want) ? want : [...dates].reverse().find((d) => d <= today) || dates[dates.length - 1];
+  load(pick);
+}
+
+async function load(date) {
+  puzzle = await (await fetch(`data/${date}.json`)).json();
+  selected.clear();
+  try { state = JSON.parse(localStorage.getItem(key())); } catch { state = null; }
+  if (!state || state.order?.length !== 16) state = freshState();
+  const i = dates.indexOf(date);
+  $("#prev").disabled = i <= 0;
+  $("#next").disabled = i >= dates.length - 1 || dates[i + 1] > localToday();
+  $("#date").textContent = fmtDate(date);
+  $("#meta").innerHTML = `<b>#${puzzle.id}</b>${puzzle.editor ? " · " + puzzle.editor : ""}`;
+  history.replaceState(null, "", date === localToday() ? location.pathname : `?d=${date}`);
+  render();
+}
+
+function render() {
+  board.innerHTML = "";
+  for (let r = 0; r < 4; r++) {
+    const g = state.solved[r];
+    if (g !== null) {
+      const grp = puzzle.groups[g];
+      const el = document.createElement("div");
+      el.className = "solved";
+      el.dataset.c = g + 1;
+      el.innerHTML = `<b>${grp.title}</b><span>${grp.words.join(", ")}</span>` +
+        (state.labels[r] ? `<em>your guess: ${escapeHtml(state.labels[r])}</em>` : "");
+      board.append(el);
+      continue;
+    }
+    const wrap = document.createElement("div");
+    wrap.innerHTML = `
+      <div class="row-head">
+        <button class="dot" data-c="${state.colors[r]}" aria-label="Change row color"></button>
+        <input class="label" placeholder="What connects these?" value="${escapeHtml(state.labels[r])}" maxlength="60">
+        <button class="check">Check</button>
+      </div>
+      <div class="row" data-c="${state.colors[r]}"></div>`;
+    const row = wrap.querySelector(".row");
+    for (let c = 0; c < 4; c++) {
+      const idx = r * 4 + c, word = state.order[idx];
+      const t = document.createElement("div");
+      t.className = "tile" + (word.length > 8 ? " long" : "") + (selected.has(word) ? " sel" : "");
+      t.textContent = word;
+      t.dataset.idx = idx;
+      row.append(t);
+    }
+    wrap.querySelector(".dot").onclick = () => { state.colors[r] = (state.colors[r] + 1) % 5; save(); render(); };
+    wrap.querySelector(".label").oninput = (e) => { state.labels[r] = e.target.value; save(); };
+    wrap.querySelector(".check").onclick = () => check(r, row);
+    board.append(wrap);
+  }
+  updateButtons();
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+}
+
+function updateButtons() {
+  $("#group").disabled = selected.size !== 4;
+  $("#deselect").disabled = selected.size === 0;
+  $("#group").textContent = selected.size === 4 ? "Group" : `Group (${selected.size}/4)`;
+}
+
+let toastTimer;
+function toast(msg) {
+  const t = $("#toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove("show"), 1600);
+}
+
+// Move solved rows to the top, carrying their metadata.
+function swapRows(a, b) {
+  if (a === b) return;
+  for (let c = 0; c < 4; c++) {
+    [state.order[a * 4 + c], state.order[b * 4 + c]] = [state.order[b * 4 + c], state.order[a * 4 + c]];
+  }
+  for (const k of ["labels", "colors", "solved"]) [state[k][a], state[k][b]] = [state[k][b], state[k][a]];
+}
+function settle(r) {
+  const top = state.solved.findIndex((s) => s === null);
+  if (top !== -1 && top < r) swapRows(top, r);
+}
+
+function check(r, rowEl) {
+  const words = state.order.slice(r * 4, r * 4 + 4);
+  let best = 0;
+  for (let g = 0; g < 4; g++) {
+    if (state.solved.includes(g)) continue;
+    const hits = puzzle.groups[g].words.filter((w) => words.includes(w)).length;
+    if (hits === 4) {
+      state.solved[r] = g;
+      words.forEach((w) => selected.delete(w));
+      settle(r);
+      save(); render();
+      toast(state.solved.every((s) => s !== null) ? "Solved it 🎉" : "Nice!");
+      return;
+    }
+    best = Math.max(best, hits);
+  }
+  rowEl.classList.remove("shake"); void rowEl.offsetWidth; rowEl.classList.add("shake");
+  toast(best === 3 ? "One away…" : "Not quite");
+}
+
+function groupSelected() {
+  if (selected.size !== 4) return;
+  const free = [0, 1, 2, 3].filter((r) => state.solved[r] === null);
+  const r = free.find((r) => state.colors[r] === 0) ?? free[0];
+  const sel = [...selected];
+  const target = [0, 1, 2, 3].map((c) => r * 4 + c);
+  // Swap each selected word into the target row.
+  sel.forEach((w, c) => {
+    const from = state.order.indexOf(w), to = target[c];
+    [state.order[from], state.order[to]] = [state.order[to], state.order[from]];
+  });
+  if (!state.colors[r]) {
+    const used = new Set(state.colors.filter(Boolean).concat(state.solved.filter((s) => s !== null).map((s) => s + 1)));
+    state.colors[r] = [1, 2, 3, 4].find((c) => !used.has(c)) || 1;
+  }
+  selected.clear();
+  save(); render();
+}
+
+function shuffle() {
+  const free = [];
+  for (let i = 0; i < 16; i++) if (state.solved[Math.floor(i / 4)] === null) free.push(i);
+  const words = free.map((i) => state.order[i]);
+  for (let i = words.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [words[i], words[j]] = [words[j], words[i]];
+  }
+  free.forEach((i, k) => (state.order[i] = words[k]));
+  save(); render();
+}
+
+// --- Drag & tap ---------------------------------------------------------
+let drag = null;
+board.addEventListener("pointerdown", (e) => {
+  const tile = e.target.closest(".tile");
+  if (!tile || e.button > 0) return;
+  e.preventDefault();
+  drag = { tile, x: e.clientX, y: e.clientY, moved: false, ghost: null, target: null };
+  tile.setPointerCapture(e.pointerId);
+});
+board.addEventListener("pointermove", (e) => {
+  if (!drag) return;
+  const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+  if (!drag.moved && Math.hypot(dx, dy) < 6) return;
+  if (!drag.moved) {
+    drag.moved = true;
+    const r = drag.tile.getBoundingClientRect();
+    drag.ox = drag.x - r.left; drag.oy = drag.y - r.top;
+    drag.ghost = drag.tile.cloneNode(true);
+    drag.ghost.classList.add("ghost");
+    drag.ghost.classList.remove("sel");
+    Object.assign(drag.ghost.style, { width: r.width + "px", height: r.height + "px" });
+    document.body.append(drag.ghost);
+    drag.tile.classList.add("dragging");
+  }
+  drag.ghost.style.left = e.clientX - drag.ox + "px";
+  drag.ghost.style.top = e.clientY - drag.oy + "px";
+  const over = document.elementFromPoint(e.clientX, e.clientY)?.closest(".tile");
+  const target = over && over !== drag.tile ? over : null;
+  if (target !== drag.target) {
+    drag.target?.classList.remove("target");
+    target?.classList.add("target");
+    drag.target = target;
+  }
+});
+function endDrag() {
+  if (!drag) return;
+  const { tile, moved, ghost, target } = drag;
+  drag = null;
+  ghost?.remove();
+  if (!moved) {
+    const w = state.order[tile.dataset.idx];
+    if (selected.has(w)) selected.delete(w);
+    else if (selected.size < 4) selected.add(w);
+    else return toast("Max 4 selected");
+    tile.classList.toggle("sel", selected.has(w));
+    updateButtons();
+    return;
+  }
+  if (target) {
+    const a = +tile.dataset.idx, b = +target.dataset.idx;
+    [state.order[a], state.order[b]] = [state.order[b], state.order[a]];
+    save();
+  }
+  render();
+}
+board.addEventListener("pointerup", endDrag);
+board.addEventListener("pointercancel", endDrag);
+
+// --- Controls -----------------------------------------------------------
+$("#shuffle").onclick = shuffle;
+$("#group").onclick = groupSelected;
+$("#deselect").onclick = () => { selected.clear(); render(); };
+$("#reset").onclick = () => { if (confirm("Reset this puzzle?")) { state = freshState(); selected.clear(); save(); render(); } };
+$("#reveal").onclick = () => {
+  if (!confirm("Reveal all answers?")) return;
+  puzzle.groups.forEach((g, i) => {
+    const r = state.solved.indexOf(i);
+    if (r !== -1) return;
+    const row = state.solved.findIndex((s) => s === null);
+    // Place group words into the next unsolved row, then mark it solved.
+    g.words.forEach((w, c) => {
+      const from = state.order.indexOf(w), to = row * 4 + c;
+      [state.order[from], state.order[to]] = [state.order[to], state.order[from]];
+    });
+    state.solved[row] = i;
+  });
+  selected.clear(); save(); render();
+};
+$("#prev").onclick = () => load(dates[dates.indexOf(puzzle.date) - 1]);
+$("#next").onclick = () => load(dates[dates.indexOf(puzzle.date) + 1]);
+document.addEventListener("keydown", (e) => {
+  if (e.target.matches("input")) return;
+  if (e.key === "Enter") groupSelected();
+  if (e.key === "Escape") { selected.clear(); render(); }
+});
+
+init();
+</script>
+</body>
+</html>

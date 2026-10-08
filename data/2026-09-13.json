@@ -1,0 +1,61 @@
+{
+  "date": "2026-09-13",
+  "id": 1287,
+  "editor": "Wyna Liu",
+  "words": [
+    "PORRIDGE",
+    "GARFIELD",
+    "DROOPY",
+    "EMPTY",
+    "HEATHCLIFF",
+    "EXCESS",
+    "GRANT",
+    "SLACK",
+    "ODIE",
+    "PARAMOUNT",
+    "SAGGING",
+    "MADISON",
+    "FLACCID",
+    "KEWPIE",
+    "CLEVELAND",
+    "DOUBLESPEAK"
+  ],
+  "groups": [
+    {
+      "title": "LACKING IN FIRMNESS",
+      "words": [
+        "DROOPY",
+        "FLACCID",
+        "SAGGING",
+        "SLACK"
+      ]
+    },
+    {
+      "title": "U.S. PRESIDENTS",
+      "words": [
+        "CLEVELAND",
+        "GARFIELD",
+        "GRANT",
+        "MADISON"
+      ]
+    },
+    {
+      "title": "WORDS THAT SOUND LIKE TWO LETTERS",
+      "words": [
+        "EMPTY",
+        "EXCESS",
+        "KEWPIE",
+        "ODIE"
+      ]
+    },
+    {
+      "title": "ENDING IN ELEVATED LANDFORMS",
+      "words": [
+        "DOUBLESPEAK",
+        "HEATHCLIFF",
+        "PARAMOUNT",
+        "PORRIDGE"
+      ]
+    }
+  ]
+}

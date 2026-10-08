@@ -1,0 +1,61 @@
+{
+  "date": "2026-09-17",
+  "id": 1296,
+  "editor": "Wyna Liu",
+  "words": [
+    "SPRING",
+    "SUBWAY STATION",
+    "PRESTIGE",
+    "TRIANGLE",
+    "TAP",
+    "GIVE",
+    "LANGUAGE",
+    "FOUNTAIN",
+    "WELL",
+    "BOUNCE",
+    "SEWER LINE",
+    "HANDLES",
+    "SHEEP DETECTIVES",
+    "MINE SHAFT",
+    "FLEXIBILITY",
+    "WOLVERINE"
+  ],
+  "groups": [
+    {
+      "title": "ELASTICITY",
+      "words": [
+        "BOUNCE",
+        "FLEXIBILITY",
+        "GIVE",
+        "SPRING"
+      ]
+    },
+    {
+      "title": "THINGS THAT ARE UNDERGROUND",
+      "words": [
+        "MINE SHAFT",
+        "SEWER LINE",
+        "SUBWAY STATION",
+        "WELL"
+      ]
+    },
+    {
+      "title": "HUGH JACKMAN MOVIES, WITH \"THE\"",
+      "words": [
+        "FOUNTAIN",
+        "PRESTIGE",
+        "SHEEP DETECTIVES",
+        "WOLVERINE"
+      ]
+    },
+    {
+      "title": "LOVE ___",
+      "words": [
+        "HANDLES",
+        "LANGUAGE",
+        "TAP",
+        "TRIANGLE"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-03",
+  "id": 1313,
+  "editor": "Wyna Liu",
+  "words": [
+    "WHITNEY HOUSTON",
+    "LINDA HAMILTON",
+    "RIVER PHOENIX",
+    "JOHN DENVER",
+    "GETTY IMAGES",
+    "ELBOW GREASE",
+    "CAN OPENER",
+    "SOMETHING WICKED",
+    "FAT CATS",
+    "HEAD WAITER",
+    "MERV GRIFFIN",
+    "BROAD BEAN",
+    "NY GIANT",
+    "MET HALFWAY",
+    "W.C. FIELDS",
+    "DIET SPRITE"
+  ],
+  "groups": [
+    {
+      "title": "STARTING WITH TERMS FOR \"TOILET\"",
+      "words": [
+        "CAN OPENER",
+        "HEAD WAITER",
+        "JOHN DENVER",
+        "W.C. FIELDS"
+      ]
+    },
+    {
+      "title": "ENDING IN MUSICALS",
+      "words": [
+        "ELBOW GREASE",
+        "FAT CATS",
+        "LINDA HAMILTON",
+        "SOMETHING WICKED"
+      ]
+    },
+    {
+      "title": "STARTING WITH U.S. MUSEUMS",
+      "words": [
+        "BROAD BEAN",
+        "GETTY IMAGES",
+        "MET HALFWAY",
+        "WHITNEY HOUSTON"
+      ]
+    },
+    {
+      "title": "ENDING IN FANTASY CREATURES",
+      "words": [
+        "DIET SPRITE",
+        "MERV GRIFFIN",
+        "NY GIANT",
+        "RIVER PHOENIX"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "date": "2026-09-24",
+  "id": 1302,
+  "editor": "Wyna Liu",
+  "words": [
+    "THE BEAR",
+    "FOAM FINGER",
+    "POGO STICK",
+    "FACE PAINT",
+    "BOBBLEHEAD",
+    "BEER HAT",
+    "UNCLE SAM",
+    "CAPE",
+    "CREATION OF ADAM",
+    "TRAMPOLINE",
+    "FANGS",
+    "BREATHE",
+    "FAKE BLOOD",
+    "I'M WITH STUPID SHIRT",
+    "SNAKES IN A CAN",
+    "HERB TEA"
+  ],
+  "groups": [
+    {
+      "title": "PARTS OF A VAMPIRE COSTUME",
+      "words": [
+        "CAPE",
+        "FACE PAINT",
+        "FAKE BLOOD",
+        "FANGS"
+      ]
+    },
+    {
+      "title": "THINGS WITH SPRING/S",
+      "words": [
+        "BOBBLEHEAD",
+        "POGO STICK",
+        "SNAKES IN A CAN",
+        "TRAMPOLINE"
+      ]
+    },
+    {
+      "title": "FEATURING POINTING",
+      "words": [
+        "CREATION OF ADAM",
+        "FOAM FINGER",
+        "I'M WITH STUPID SHIRT",
+        "UNCLE SAM"
+      ]
+    },
+    {
+      "title": "ANAGRAMS",
+      "words": [
+        "BEER HAT",
+        "BREATHE",
+        "HERB TEA",
+        "THE BEAR"
+      ]
+    }
+  ]
+}

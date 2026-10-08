@@ -1,0 +1,61 @@
+{
+  "date": "2026-09-25",
+  "id": 1297,
+  "editor": "Wyna Liu",
+  "words": [
+    "RATHER",
+    "BOUGIE",
+    "GENIUS",
+    "SPRING",
+    "BORDER",
+    "RATCHET",
+    "SWANK",
+    "SAVAGE",
+    "CLASSY",
+    "LEVY",
+    "PENDULUM",
+    "FANCY",
+    "ESCAPEMENT",
+    "POSH",
+    "FOAMILY",
+    "AYKROYD"
+  ],
+  "groups": [
+    {
+      "title": "LUXE",
+      "words": [
+        "BOUGIE",
+        "FANCY",
+        "POSH",
+        "SWANK"
+      ]
+    },
+    {
+      "title": "PARTS OF A MECHANICAL CLOCK",
+      "words": [
+        "ESCAPEMENT",
+        "PENDULUM",
+        "RATCHET",
+        "SPRING"
+      ]
+    },
+    {
+      "title": "FAMOUS DANS",
+      "words": [
+        "AYKROYD",
+        "LEVY",
+        "RATHER",
+        "SAVAGE"
+      ]
+    },
+    {
+      "title": "TAXONOMIC RANKS PLUS A LETTER",
+      "words": [
+        "BORDER",
+        "CLASSY",
+        "FOAMILY",
+        "GENIUS"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "date": "2026-09-26",
+  "id": 1303,
+  "editor": "Wyna Liu",
+  "words": [
+    "MINT",
+    "PRESS",
+    "GRAIN",
+    "BEANS",
+    "STARCH",
+    "CAT",
+    "CUCUMBER",
+    "RINGS",
+    "GUM",
+    "FOLD",
+    "KNOTS",
+    "CUSTOMER",
+    "WASH",
+    "MOUTHWASH",
+    "BURL",
+    "SPRAY"
+  ],
+  "groups": [
+    {
+      "title": "BREATH FRESHENERS",
+      "words": [
+        "GUM",
+        "MINT",
+        "MOUTHWASH",
+        "SPRAY"
+      ]
+    },
+    {
+      "title": "THINGS DONE TO A DRESS SHIRT AT THE LAUNDRY",
+      "words": [
+        "FOLD",
+        "PRESS",
+        "STARCH",
+        "WASH"
+      ]
+    },
+    {
+      "title": "FEATURES OF WOOD",
+      "words": [
+        "BURL",
+        "GRAIN",
+        "KNOTS",
+        "RINGS"
+      ]
+    },
+    {
+      "title": "\"COOL\" THINGS, IN EXPRESSIONS",
+      "words": [
+        "BEANS",
+        "CAT",
+        "CUCUMBER",
+        "CUSTOMER"
+      ]
+    }
+  ]
+}

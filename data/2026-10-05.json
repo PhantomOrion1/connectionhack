@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-05",
+  "id": 1309,
+  "editor": "Wyna Liu",
+  "words": [
+    "PARENT",
+    "ADVISORY",
+    "EXPLICIT",
+    "CONTENT",
+    "CHESS",
+    "PLEASE",
+    "MESSAGE",
+    "GRAPHIC",
+    "STRONG",
+    "SAPPHIRE",
+    "SUGGESTIVE",
+    "SERENE",
+    "PEACEFUL",
+    "IRONING",
+    "SLOAN",
+    "PLACID"
+  ],
+  "groups": [
+    {
+      "title": "CALM",
+      "words": [
+        "CONTENT",
+        "PEACEFUL",
+        "PLACID",
+        "SERENE"
+      ]
+    },
+    {
+      "title": "ADJECTIVES FOR MATURE CONTENT",
+      "words": [
+        "EXPLICIT",
+        "GRAPHIC",
+        "STRONG",
+        "SUGGESTIVE"
+      ]
+    },
+    {
+      "title": "KINDS OF BOARDS",
+      "words": [
+        "ADVISORY",
+        "CHESS",
+        "IRONING",
+        "MESSAGE"
+      ]
+    },
+    {
+      "title": "ENDING IN WAYS TO TEMPORARILY ACQUIRE",
+      "words": [
+        "PARENT",
+        "PLEASE",
+        "SAPPHIRE",
+        "SLOAN"
+      ]
+    }
+  ]
+}

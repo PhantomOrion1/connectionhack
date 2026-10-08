@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-08",
+  "id": 1322,
+  "editor": "Wyna Liu",
+  "words": [
+    "FOOLHARDY",
+    "MINDS",
+    "THANKS",
+    "STOOGES",
+    "BEST",
+    "WISHES",
+    "REGARDS",
+    "ECLIPSE",
+    "CHEERS",
+    "MULHOLLAND",
+    "RESPECTS",
+    "STRIKES",
+    "TOP",
+    "AUTOCRUISE",
+    "HEEDS",
+    "SURPASS"
+  ],
+  "groups": [
+    {
+      "title": "FOLLOWS, AS RULES",
+      "words": [
+        "HEEDS",
+        "MINDS",
+        "REGARDS",
+        "RESPECTS"
+      ]
+    },
+    {
+      "title": "OUTDO",
+      "words": [
+        "BEST",
+        "ECLIPSE",
+        "SURPASS",
+        "TOP"
+      ]
+    },
+    {
+      "title": "THINGS THAT COME IN THREES",
+      "words": [
+        "CHEERS",
+        "STOOGES",
+        "STRIKES",
+        "WISHES"
+      ]
+    },
+    {
+      "title": "ENDING IN ACTORS NAMED TOM",
+      "words": [
+        "AUTOCRUISE",
+        "FOOLHARDY",
+        "MULHOLLAND",
+        "THANKS"
+      ]
+    }
+  ]
+}

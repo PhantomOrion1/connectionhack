@@ -1,0 +1,61 @@
+{
+  "date": "2026-09-14",
+  "id": 1288,
+  "editor": "Wyna Liu",
+  "words": [
+    "STRAW",
+    "CRAB",
+    "COOT",
+    "LEMON",
+    "BLUE",
+    "CANARY",
+    "TEAL",
+    "RAT",
+    "LOON",
+    "BAG",
+    "WHEAT",
+    "CUTLERY",
+    "SNITCH",
+    "GOOSE",
+    "STIRRER",
+    "STOOLIE"
+  ],
+  "groups": [
+    {
+      "title": "WATERBIRDS",
+      "words": [
+        "COOT",
+        "GOOSE",
+        "LOON",
+        "TEAL"
+      ]
+    },
+    {
+      "title": "INFORMANT",
+      "words": [
+        "CANARY",
+        "RAT",
+        "SNITCH",
+        "STOOLIE"
+      ]
+    },
+    {
+      "title": "COMMON SINGLE-USE PLASTIC ITEMS",
+      "words": [
+        "BAG",
+        "CUTLERY",
+        "STIRRER",
+        "STRAW"
+      ]
+    },
+    {
+      "title": "___GRASS",
+      "words": [
+        "BLUE",
+        "CRAB",
+        "LEMON",
+        "WHEAT"
+      ]
+    }
+  ]
+}

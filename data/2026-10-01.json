@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-01",
+  "id": 1314,
+  "editor": "Wyna Liu",
+  "words": [
+    "NATIONAL",
+    "KEN",
+    "NECK",
+    "SHINS",
+    "ACRO",
+    "STICK",
+    "WAIST",
+    "WALKMEN",
+    "SITUATE",
+    "SLEEVE",
+    "CROSS",
+    "PLACE",
+    "SUD",
+    "POSITION",
+    "CHEST",
+    "DECEMBERISTS"
+  ],
+  "groups": [
+    {
+      "title": "PUT",
+      "words": [
+        "PLACE",
+        "POSITION",
+        "SITUATE",
+        "STICK"
+      ]
+    },
+    {
+      "title": "DRESS SHIRT MEASUREMENTS",
+      "words": [
+        "CHEST",
+        "NECK",
+        "SLEEVE",
+        "WAIST"
+      ]
+    },
+    {
+      "title": "2000S INDIE ROCK BANDS, WITH \"THE\"",
+      "words": [
+        "DECEMBERISTS",
+        "NATIONAL",
+        "SHINS",
+        "WALKMEN"
+      ]
+    },
+    {
+      "title": "STARTS OF NYT PRINT PUZZLES",
+      "words": [
+        "ACRO",
+        "CROSS",
+        "KEN",
+        "SUD"
+      ]
+    }
+  ]
+}

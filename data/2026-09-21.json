@@ -1,0 +1,61 @@
+{
+  "date": "2026-09-21",
+  "id": 1293,
+  "editor": "Wyna Liu",
+  "words": [
+    "COMPOSE",
+    "CHECK",
+    "FLY",
+    "BEET",
+    "BRAH",
+    "WORM",
+    "SPAM",
+    "MATE",
+    "CASTLE",
+    "CHUM",
+    "VIVA",
+    "SENT",
+    "CHOP",
+    "CAPTURE",
+    "DRAFTS",
+    "SPINNER"
+  ],
+  "groups": [
+    {
+      "title": "EMAIL BUTTONS",
+      "words": [
+        "COMPOSE",
+        "DRAFTS",
+        "SENT",
+        "SPAM"
+      ]
+    },
+    {
+      "title": "WAYS TO ATTRACT FISH",
+      "words": [
+        "CHUM",
+        "FLY",
+        "SPINNER",
+        "WORM"
+      ]
+    },
+    {
+      "title": "CHESS VERBS",
+      "words": [
+        "CAPTURE",
+        "CASTLE",
+        "CHECK",
+        "MATE"
+      ]
+    },
+    {
+      "title": "STARTS OF COMPOSERS' NAMES",
+      "words": [
+        "BEET",
+        "BRAH",
+        "CHOP",
+        "VIVA"
+      ]
+    }
+  ]
+}

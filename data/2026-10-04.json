@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-04",
+  "id": 1315,
+  "editor": "Wyna Liu",
+  "words": [
+    "WIG",
+    "FILM",
+    "AUCTION",
+    "TABLE",
+    "PADDLE",
+    "COLLAR",
+    "GAVEL",
+    "LOT",
+    "BUNCH",
+    "BALL",
+    "PARTNER",
+    "NET",
+    "ROBE",
+    "HEAP",
+    "TREATMENT",
+    "STACK"
+  ],
+  "groups": [
+    {
+      "title": "CONSIDERABLE AMOUNT",
+      "words": [
+        "BUNCH",
+        "HEAP",
+        "LOT",
+        "STACK"
+      ]
+    },
+    {
+      "title": "TABLE TENNIS NEEDS",
+      "words": [
+        "BALL",
+        "NET",
+        "PADDLE",
+        "TABLE"
+      ]
+    },
+    {
+      "title": "PARTS OF A JUDGE COSTUME",
+      "words": [
+        "COLLAR",
+        "GAVEL",
+        "ROBE",
+        "WIG"
+      ]
+    },
+    {
+      "title": "SILENT ___",
+      "words": [
+        "AUCTION",
+        "FILM",
+        "PARTNER",
+        "TREATMENT"
+      ]
+    }
+  ]
+}

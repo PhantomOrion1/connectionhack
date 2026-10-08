@@ -1,0 +1,61 @@
+{
+  "date": "2026-09-28",
+  "id": 1305,
+  "editor": "Wyna Liu",
+  "words": [
+    "CHIHUAHUA",
+    "LEMON",
+    "VIPER",
+    "BAMBOO",
+    "CELERY",
+    "TABASCO",
+    "ARKANSANS",
+    "DURANGO",
+    "SPRINGING",
+    "CHARGER",
+    "HORSERADISH",
+    "WHEAT",
+    "POSSESSES",
+    "MIGNONETTE",
+    "CORN",
+    "CHALLENGER"
+  ],
+  "groups": [
+    {
+      "title": "THINGS WITH STALKS",
+      "words": [
+        "BAMBOO",
+        "CELERY",
+        "CORN",
+        "WHEAT"
+      ]
+    },
+    {
+      "title": "OYSTER CONDIMENTS",
+      "words": [
+        "HORSERADISH",
+        "LEMON",
+        "MIGNONETTE",
+        "TABASCO"
+      ]
+    },
+    {
+      "title": "DODGE MODELS",
+      "words": [
+        "CHALLENGER",
+        "CHARGER",
+        "DURANGO",
+        "VIPER"
+      ]
+    },
+    {
+      "title": "THREE LETTERS PLUS REPEATED TRIGRAMS",
+      "words": [
+        "ARKANSANS",
+        "CHIHUAHUA",
+        "POSSESSES",
+        "SPRINGING"
+      ]
+    }
+  ]
+}
