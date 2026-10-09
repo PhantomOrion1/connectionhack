@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-10",
+  "id": 1318,
+  "editor": "Wyna Liu",
+  "words": [
+    "OUTLINE",
+    "SHADOW",
+    "FEED",
+    "FIGURE",
+    "DRAFT",
+    "IMAGINE",
+    "KICK",
+    "NOTIFICATIONS",
+    "GATHER",
+    "NOTES",
+    "UN",
+    "MESSAGES",
+    "BEAT",
+    "SUPPOSE",
+    "PROFILE",
+    "THESIS"
+  ],
+  "groups": [
+    {
+      "title": "USEFUL WHEN WRITING A PAPER",
+      "words": [
+        "DRAFT",
+        "NOTES",
+        "OUTLINE",
+        "THESIS"
+      ]
+    },
+    {
+      "title": "PRESUME",
+      "words": [
+        "FIGURE",
+        "GATHER",
+        "IMAGINE",
+        "SUPPOSE"
+      ]
+    },
+    {
+      "title": "SOCIAL MEDIA SECTIONS",
+      "words": [
+        "FEED",
+        "MESSAGES",
+        "NOTIFICATIONS",
+        "PROFILE"
+      ]
+    },
+    {
+      "title": "___BOXING",
+      "words": [
+        "BEAT",
+        "KICK",
+        "SHADOW",
+        "UN"
+      ]
+    }
+  ]
+}
