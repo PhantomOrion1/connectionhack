@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-13",
+  "id": 1321,
+  "editor": "Wyna Liu",
+  "words": [
+    "EYE",
+    "LASH",
+    "LIPS",
+    "JACKET",
+    "TIE",
+    "SENSE",
+    "CHANGE",
+    "BELT",
+    "RING",
+    "TASTE",
+    "CUP",
+    "HITCH",
+    "CANNON",
+    "TETHER",
+    "FLAIR",
+    "ENDS"
+  ],
+  "groups": [
+    {
+      "title": "DISCERNMENT",
+      "words": [
+        "EYE",
+        "FLAIR",
+        "SENSE",
+        "TASTE"
+      ]
+    },
+    {
+      "title": "FASTEN",
+      "words": [
+        "HITCH",
+        "LASH",
+        "TETHER",
+        "TIE"
+      ]
+    },
+    {
+      "title": "SPORTS CHAMPIONSHIP PRIZES",
+      "words": [
+        "BELT",
+        "CUP",
+        "JACKET",
+        "RING"
+      ]
+    },
+    {
+      "title": "LOOSE ___",
+      "words": [
+        "CANNON",
+        "CHANGE",
+        "ENDS",
+        "LIPS"
+      ]
+    }
+  ]
+}
