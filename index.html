@@ -219,6 +219,8 @@ const save = () => { try { localStorage.setItem(key(), JSON.stringify(state)); }
 function freshState() {
   return { order: [...puzzle.words], labels: ["", "", "", ""], colors: [0, 0, 0, 0], solved: [null, null, null, null], guesses: [], done: null };
 }
+// Official puzzle number: #1 was 2023-06-12. (The API "id" is an internal ID, not this.)
+const puzzleNumber = () => Math.round((Date.parse(puzzle.date) - Date.parse("2023-06-12")) / 864e5) + 1;
 const MAX_MISTAKES = 4;
 const EMOJI = ["🟨", "🟩", "🟦", "🟪"];
 const groupOf = (w) => puzzle.groups.findIndex((g) => g.words.includes(w));
@@ -248,7 +250,7 @@ async function load(date) {
   $("#prev").disabled = i <= 0;
   $("#next").disabled = i >= dates.length - 1 || dates[i + 1] > localToday();
   $("#date").textContent = fmtDate(date);
-  $("#meta").innerHTML = `<b>#${puzzle.id}</b>${puzzle.editor ? " · " + puzzle.editor : ""}`;
+  $("#meta").innerHTML = `<b>#${puzzleNumber()}</b>${puzzle.editor ? " · " + puzzle.editor : ""}`;
   history.replaceState(null, "", date === localToday() ? location.pathname : `?d=${date}`);
   render();
 }
@@ -302,7 +304,7 @@ function renderLives() {
 }
 
 function shareText() {
-  return `Connections\nPuzzle #${puzzle.id}\n` + state.guesses.map((g) => g.map((x) => EMOJI[x]).join("")).join("\n");
+  return `Connections\nPuzzle #${puzzleNumber()}\n` + state.guesses.map((g) => g.map((x) => EMOJI[x]).join("")).join("\n");
 }
 
 function renderResult() {
