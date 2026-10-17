@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-18",
+  "id": 1333,
+  "editor": "Wyna Liu",
+  "words": [
+    "ANGEL",
+    "BUTTER",
+    "HAZEL",
+    "DEODORANT",
+    "COCO",
+    "DYNAMITE",
+    "MISTER",
+    "FOGERTY",
+    "CHEST",
+    "INCENSE",
+    "VAPORETTO",
+    "BUREAU",
+    "OBSESSION",
+    "TRUNK",
+    "OPIUM",
+    "WARDROBE"
+  ],
+  "groups": [
+    {
+      "title": "PLACES TO STORE CLOTHES",
+      "words": [
+        "BUREAU",
+        "CHEST",
+        "TRUNK",
+        "WARDROBE"
+      ]
+    },
+    {
+      "title": "THINGS THAT COME IN STICKS",
+      "words": [
+        "BUTTER",
+        "DEODORANT",
+        "DYNAMITE",
+        "INCENSE"
+      ]
+    },
+    {
+      "title": "FAMOUS PERFUMES",
+      "words": [
+        "ANGEL",
+        "COCO",
+        "OBSESSION",
+        "OPIUM"
+      ]
+    },
+    {
+      "title": "STARTING WITH THINGS THAT CLOUD THE AIR",
+      "words": [
+        "FOGERTY",
+        "HAZEL",
+        "MISTER",
+        "VAPORETTO"
+      ]
+    }
+  ]
+}
