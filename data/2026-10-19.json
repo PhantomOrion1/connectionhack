@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-19",
+  "id": 1327,
+  "editor": "Wyna Liu",
+  "words": [
+    "MOHAWK",
+    "MUFFIN",
+    "HOT AIR",
+    "BALLOON",
+    "RAVE",
+    "WIND",
+    "FLURRY",
+    "STEAM",
+    "GAS",
+    "RIB",
+    "FUME",
+    "ALIBIS",
+    "BOIL",
+    "BLATHER",
+    "ESCROW",
+    "NUGGETS"
+  ],
+  "groups": [
+    {
+      "title": "SEETHE",
+      "words": [
+        "BOIL",
+        "FUME",
+        "RAVE",
+        "STEAM"
+      ]
+    },
+    {
+      "title": "ALL TALK",
+      "words": [
+        "BLATHER",
+        "GAS",
+        "HOT AIR",
+        "WIND"
+      ]
+    },
+    {
+      "title": "\"MC\" THINGS AT MCDONALD'S",
+      "words": [
+        "FLURRY",
+        "MUFFIN",
+        "NUGGETS",
+        "RIB"
+      ]
+    },
+    {
+      "title": "ENDING IN BIRDS",
+      "words": [
+        "ALIBIS",
+        "BALLOON",
+        "ESCROW",
+        "MOHAWK"
+      ]
+    }
+  ]
+}
