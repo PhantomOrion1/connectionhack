@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-24",
+  "id": 1338,
+  "editor": "Wyna Liu",
+  "words": [
+    "COMIC",
+    "SALAD",
+    "BACON",
+    "SPARKLER",
+    "POPSICLE",
+    "POP-UP",
+    "CANDY",
+    "HOBBY HORSE",
+    "BANNER",
+    "PINWHEEL",
+    "SPACE",
+    "FILM",
+    "INTERSTITIAL",
+    "SPORTS",
+    "MÖBIUS",
+    "OVERLAY"
+  ],
+  "groups": [
+    {
+      "title": "KINDS OF STRIPS",
+      "words": [
+        "BACON",
+        "COMIC",
+        "FILM",
+        "MÖBIUS"
+      ]
+    },
+    {
+      "title": "THINGS ON STICKS",
+      "words": [
+        "HOBBY HORSE",
+        "PINWHEEL",
+        "POPSICLE",
+        "SPARKLER"
+      ]
+    },
+    {
+      "title": "ONLINE AD FORMATS",
+      "words": [
+        "BANNER",
+        "INTERSTITIAL",
+        "OVERLAY",
+        "POP-UP"
+      ]
+    },
+    {
+      "title": "___ BAR",
+      "words": [
+        "CANDY",
+        "SALAD",
+        "SPACE",
+        "SPORTS"
+      ]
+    }
+  ]
+}
