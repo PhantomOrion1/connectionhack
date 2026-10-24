@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-25",
+  "id": 1343,
+  "editor": "Wyna Liu",
+  "words": [
+    "GLOW STICK",
+    "WAGON WHEEL",
+    "POCKET",
+    "FOOTBALL",
+    "THUMB",
+    "ELBOW",
+    "SWIFT",
+    "FINGERS",
+    "SHELL",
+    "PALM",
+    "RUBBER BAND",
+    "BOW TIE",
+    "SAWYER",
+    "SWIPE",
+    "RIPLEY",
+    "BOOST"
+  ],
+  "groups": [
+    {
+      "title": "STEAL",
+      "words": [
+        "BOOST",
+        "PALM",
+        "POCKET",
+        "SWIPE"
+      ]
+    },
+    {
+      "title": "PASTA SHAPES",
+      "words": [
+        "BOW TIE",
+        "ELBOW",
+        "SHELL",
+        "WAGON WHEEL"
+      ]
+    },
+    {
+      "title": "FICTIONAL TOMS",
+      "words": [
+        "RIPLEY",
+        "SAWYER",
+        "SWIFT",
+        "THUMB"
+      ]
+    },
+    {
+      "title": "THINGS THAT CAN BE SNAPPED",
+      "words": [
+        "FINGERS",
+        "FOOTBALL",
+        "GLOW STICK",
+        "RUBBER BAND"
+      ]
+    }
+  ]
+}
