@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-04",
+  "id": 1355,
+  "editor": "Wyna Liu",
+  "words": [
+    "FLY",
+    "POKE",
+    "IRON",
+    "WORKS",
+    "WOOD",
+    "WRING",
+    "WEDGE",
+    "BLEACH",
+    "PUTTER",
+    "CRACKER",
+    "DOORSTOP",
+    "LOLL",
+    "FLATIRON BUILDING",
+    "SHUFFLE",
+    "TUMBLE DRY",
+    "PIE SLICE"
+  ],
+  "groups": [
+    {
+      "title": "TRIANGULAR PRISMS WITH A SHARP EDGE",
+      "words": [
+        "DOORSTOP",
+        "FLATIRON BUILDING",
+        "PIE SLICE",
+        "WEDGE"
+      ]
+    },
+    {
+      "title": "WORDS AFTER \"DO NOT\" ON A CARE LABEL",
+      "words": [
+        "BLEACH",
+        "IRON",
+        "TUMBLE DRY",
+        "WRING"
+      ]
+    },
+    {
+      "title": "MOVE IDLY, WITH \"AROUND\"",
+      "words": [
+        "LOLL",
+        "POKE",
+        "PUTTER",
+        "SHUFFLE"
+      ]
+    },
+    {
+      "title": "FIRE___",
+      "words": [
+        "CRACKER",
+        "FLY",
+        "WOOD",
+        "WORKS"
+      ]
+    }
+  ]
+}
