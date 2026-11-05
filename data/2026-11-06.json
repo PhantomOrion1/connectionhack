@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-06",
+  "id": 1346,
+  "editor": "Wyna Liu",
+  "words": [
+    "BACKUP",
+    "PICKUP",
+    "MAKEUP",
+    "HOT ROD",
+    "FLATBED",
+    "FABRIC",
+    "EXTRA",
+    "WOOLENS",
+    "TRAFFIC CONE",
+    "SEMI",
+    "CONSTITUTION",
+    "REPLACEMENT",
+    "SPARE",
+    "OSIRIS",
+    "STRUCTURE",
+    "TANKER"
+  ],
+  "groups": [
+    {
+      "title": "COMPOSITION",
+      "words": [
+        "CONSTITUTION",
+        "FABRIC",
+        "MAKEUP",
+        "STRUCTURE"
+      ]
+    },
+    {
+      "title": "COPY",
+      "words": [
+        "BACKUP",
+        "EXTRA",
+        "REPLACEMENT",
+        "SPARE"
+      ]
+    },
+    {
+      "title": "KINDS OF TRUCKS",
+      "words": [
+        "FLATBED",
+        "PICKUP",
+        "SEMI",
+        "TANKER"
+      ]
+    },
+    {
+      "title": "ENDING IN PARTS OF THE EYE",
+      "words": [
+        "HOT ROD",
+        "OSIRIS",
+        "TRAFFIC CONE",
+        "WOOLENS"
+      ]
+    }
+  ]
+}
