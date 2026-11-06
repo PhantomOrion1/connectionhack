@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-07",
+  "id": 1350,
+  "editor": "Wyna Liu",
+  "words": [
+    "POLO",
+    "EASTER",
+    "NEW",
+    "CLONE",
+    "RHODE",
+    "RINGER",
+    "SOON",
+    "TREASURE",
+    "HENLEY",
+    "BOUNTY",
+    "NORTH",
+    "CANE",
+    "SPOILS",
+    "SOUTH",
+    "RAGLAN",
+    "BOOTY"
+  ],
+  "groups": [
+    {
+      "title": "PIRATE'S PLUNDER",
+      "words": [
+        "BOOTY",
+        "BOUNTY",
+        "SPOILS",
+        "TREASURE"
+      ]
+    },
+    {
+      "title": "KINDS OF SHIRTS",
+      "words": [
+        "HENLEY",
+        "POLO",
+        "RAGLAN",
+        "RINGER"
+      ]
+    },
+    {
+      "title": "FIRST WORDS OF U.S. STATE NAMES",
+      "words": [
+        "NEW",
+        "NORTH",
+        "RHODE",
+        "SOUTH"
+      ]
+    },
+    {
+      "title": "ENDS OF STORM TYPES",
+      "words": [
+        "CANE",
+        "CLONE",
+        "EASTER",
+        "SOON"
+      ]
+    }
+  ]
+}
