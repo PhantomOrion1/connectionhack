@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-13",
+  "id": 1360,
+  "editor": "Wyna Liu",
+  "words": [
+    "PRESS",
+    "BARGE",
+    "SCROLL",
+    "WATER SKIER",
+    "SURF",
+    "TEASER",
+    "WAVES",
+    "TRAILER",
+    "TRUST",
+    "EXPOSURE",
+    "SEARCH",
+    "FREEZE",
+    "COVERAGE",
+    "GLIDER",
+    "PUBLICITY",
+    "BROWSE"
+  ],
+  "groups": [
+    {
+      "title": "USE THE INTERNET",
+      "words": [
+        "BROWSE",
+        "SCROLL",
+        "SEARCH",
+        "SURF"
+      ]
+    },
+    {
+      "title": "MEDIA ATTENTION",
+      "words": [
+        "COVERAGE",
+        "EXPOSURE",
+        "PRESS",
+        "PUBLICITY"
+      ]
+    },
+    {
+      "title": "THINGS THAT ARE TOWED",
+      "words": [
+        "BARGE",
+        "GLIDER",
+        "TRAILER",
+        "WATER SKIER"
+      ]
+    },
+    {
+      "title": "BRAIN ___",
+      "words": [
+        "FREEZE",
+        "TEASER",
+        "TRUST",
+        "WAVES"
+      ]
+    }
+  ]
+}
