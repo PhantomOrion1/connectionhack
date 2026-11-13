@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-14",
+  "id": 1348,
+  "editor": "Wyna Liu",
+  "words": [
+    "COMPLEX",
+    "CHESS",
+    "BATTLE",
+    "ADVANCED",
+    "MARRIAGE",
+    "PROGRESSIVE",
+    "CENTER",
+    "MOTTLE",
+    "GO",
+    "FACILITY",
+    "MODERN",
+    "OTHELLO",
+    "TRIB",
+    "STRATEGO",
+    "CAMPUS",
+    "FOREMOST"
+  ],
+  "groups": [
+    {
+      "title": "CUTTING-EDGE",
+      "words": [
+        "ADVANCED",
+        "FOREMOST",
+        "MODERN",
+        "PROGRESSIVE"
+      ]
+    },
+    {
+      "title": "LOCATIONS FOR AN INSTITUTION",
+      "words": [
+        "CAMPUS",
+        "CENTER",
+        "COMPLEX",
+        "FACILITY"
+      ]
+    },
+    {
+      "title": "STRATEGY BOARD GAMES",
+      "words": [
+        "CHESS",
+        "GO",
+        "OTHELLO",
+        "STRATEGO"
+      ]
+    },
+    {
+      "title": "BABY GEAR WITH FIRST LETTER CHANGED",
+      "words": [
+        "BATTLE",
+        "MARRIAGE",
+        "MOTTLE",
+        "TRIB"
+      ]
+    }
+  ]
+}
