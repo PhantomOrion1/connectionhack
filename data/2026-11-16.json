@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-16",
+  "id": 1363,
+  "editor": "Wyna Liu",
+  "words": [
+    "IN LOVE",
+    "WONDERLAND",
+    "WATER",
+    "MELON",
+    "ONION",
+    "BLOCKBUSTER",
+    "GARDEN",
+    "FOLIAGE",
+    "SAUSAGE",
+    "GLOVES",
+    "ASLEEP",
+    "CHICKEN",
+    "CLEANING",
+    "CAMP",
+    "GUY",
+    "SCHOOL"
+  ],
+  "groups": [
+    {
+      "title": "SUMMER ___",
+      "words": [
+        "BLOCKBUSTER",
+        "CAMP",
+        "SAUSAGE",
+        "SCHOOL"
+      ]
+    },
+    {
+      "title": "SPRING ___",
+      "words": [
+        "CHICKEN",
+        "CLEANING",
+        "ONION",
+        "WATER"
+      ]
+    },
+    {
+      "title": "WINTER ___",
+      "words": [
+        "GARDEN",
+        "GLOVES",
+        "MELON",
+        "WONDERLAND"
+      ]
+    },
+    {
+      "title": "FALL ___",
+      "words": [
+        "ASLEEP",
+        "FOLIAGE",
+        "GUY",
+        "IN LOVE"
+      ]
+    }
+  ]
+}
