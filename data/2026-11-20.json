@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-20",
+  "id": 1364,
+  "editor": "Wyna Liu",
+  "words": [
+    "BEAST",
+    "SPOT",
+    "CANDELABRA",
+    "TOY",
+    "TEACUP",
+    "COWSLIP",
+    "POCKET",
+    "CLOCK",
+    "REGISTER",
+    "DIPHTHONG",
+    "WIZARD",
+    "CATCH",
+    "MINIATURE",
+    "ACE",
+    "STUTTGARTER",
+    "MAVEN"
+  ],
+  "groups": [
+    {
+      "title": "PERSON WHO EXCELS AT SOMETHING",
+      "words": [
+        "ACE",
+        "BEAST",
+        "MAVEN",
+        "WIZARD"
+      ]
+    },
+    {
+      "title": "NOTICE",
+      "words": [
+        "CATCH",
+        "CLOCK",
+        "REGISTER",
+        "SPOT"
+      ]
+    },
+    {
+      "title": "DESCRIPTORS FOR SMALL ANIMALS",
+      "words": [
+        "MINIATURE",
+        "POCKET",
+        "TEACUP",
+        "TOY"
+      ]
+    },
+    {
+      "title": "ENDING IN LINGERIE",
+      "words": [
+        "CANDELABRA",
+        "COWSLIP",
+        "DIPHTHONG",
+        "STUTTGARTER"
+      ]
+    }
+  ]
+}
