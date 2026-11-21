@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-22",
+  "id": 1370,
+  "editor": "Wyna Liu",
+  "words": [
+    "EYE",
+    "WHY",
+    "TEA",
+    "HEE",
+    "GEE",
+    "SEA",
+    "SAY",
+    "WEE",
+    "EWE",
+    "SLEW",
+    "WELL",
+    "GUM",
+    "BATH",
+    "HOST",
+    "WRAP",
+    "MASS"
+  ],
+  "groups": [
+    {
+      "title": "MULTITUDE",
+      "words": [
+        "HOST",
+        "MASS",
+        "SEA",
+        "SLEW"
+      ]
+    },
+    {
+      "title": "INTERJECTIONS BEFORE A REACTION",
+      "words": [
+        "GEE",
+        "SAY",
+        "WELL",
+        "WHY"
+      ]
+    },
+    {
+      "title": "BUBBLE ___",
+      "words": [
+        "BATH",
+        "GUM",
+        "TEA",
+        "WRAP"
+      ]
+    },
+    {
+      "title": "HOMOPHONES OF PRONOUNS",
+      "words": [
+        "EWE",
+        "EYE",
+        "HEE",
+        "WEE"
+      ]
+    }
+  ]
+}
