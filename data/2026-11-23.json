@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-23",
+  "id": 1376,
+  "editor": "Wyna Liu",
+  "words": [
+    "CHICKPEA",
+    "DISTANCE",
+    "LAMBDA",
+    "DOOM",
+    "IOTA",
+    "PUPIL",
+    "BLACK",
+    "ETA",
+    "NU",
+    "SHRED",
+    "THRASH",
+    "TRAFFIC",
+    "PARTICLE",
+    "CUBISM",
+    "ROUTE",
+    "MODICUM"
+  ],
+  "groups": [
+    {
+      "title": "TINY AMOUNT",
+      "words": [
+        "IOTA",
+        "MODICUM",
+        "PARTICLE",
+        "SHRED"
+      ]
+    },
+    {
+      "title": "INFO ON A NAVIGATION APP",
+      "words": [
+        "DISTANCE",
+        "ETA",
+        "ROUTE",
+        "TRAFFIC"
+      ]
+    },
+    {
+      "title": "METAL SUBGENRES",
+      "words": [
+        "BLACK",
+        "DOOM",
+        "NU",
+        "THRASH"
+      ]
+    },
+    {
+      "title": "STARTING WITH BABY ANIMALS",
+      "words": [
+        "CHICKPEA",
+        "CUBISM",
+        "LAMBDA",
+        "PUPIL"
+      ]
+    }
+  ]
+}
