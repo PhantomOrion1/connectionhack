@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-24",
+  "id": 1374,
+  "editor": "Wyna Liu",
+  "words": [
+    "PLAYGROUND",
+    "PAPER FAN",
+    "BIG BOX STORE",
+    "CRATER",
+    "ACCORDION",
+    "MOUNTAIN",
+    "TROMBONE",
+    "LINK",
+    "TANK",
+    "CUPCAKE LINER",
+    "AMINO ACID",
+    "MICROSCOPE",
+    "FIREPLACE BELLOWS",
+    "NOSEDIVE",
+    "POWERPOINT DECK",
+    "BOTTOM OUT"
+  ],
+  "groups": [
+    {
+      "title": "DROP DRAMATICALLY",
+      "words": [
+        "BOTTOM OUT",
+        "CRATER",
+        "NOSEDIVE",
+        "TANK"
+      ]
+    },
+    {
+      "title": "THINGS WITH PLEATED FOLDS",
+      "words": [
+        "ACCORDION",
+        "CUPCAKE LINER",
+        "FIREPLACE BELLOWS",
+        "PAPER FAN"
+      ]
+    },
+    {
+      "title": "THINGS WITH SLIDES",
+      "words": [
+        "MICROSCOPE",
+        "PLAYGROUND",
+        "POWERPOINT DECK",
+        "TROMBONE"
+      ]
+    },
+    {
+      "title": "THINGS THAT FORM CHAINS",
+      "words": [
+        "AMINO ACID",
+        "BIG BOX STORE",
+        "LINK",
+        "MOUNTAIN"
+      ]
+    }
+  ]
+}
