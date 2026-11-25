@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-26",
+  "id": 1382,
+  "editor": "Wyna Liu",
+  "words": [
+    "BEER",
+    "BOTTLE OF CHAMPAGNE",
+    "BUBBLEGUM",
+    "BOWLING",
+    "POPCORN",
+    "CARNATION",
+    "WHEELIE",
+    "DONUTS",
+    "BLUSH",
+    "COMPACT",
+    "TELEVISION",
+    "MANUAL",
+    "HYBRID",
+    "CORAL",
+    "THE QUESTION",
+    "CONVERTIBLE"
+  ],
+  "groups": [
+    {
+      "title": "SHADES OF PINK",
+      "words": [
+        "BLUSH",
+        "BUBBLEGUM",
+        "CARNATION",
+        "CORAL"
+      ]
+    },
+    {
+      "title": "KINDS OF CARS",
+      "words": [
+        "COMPACT",
+        "CONVERTIBLE",
+        "HYBRID",
+        "MANUAL"
+      ]
+    },
+    {
+      "title": "THINGS HOMER SIMPSON LIKES",
+      "words": [
+        "BEER",
+        "BOWLING",
+        "DONUTS",
+        "TELEVISION"
+      ]
+    },
+    {
+      "title": "THINGS THAT ARE POPPED",
+      "words": [
+        "BOTTLE OF CHAMPAGNE",
+        "POPCORN",
+        "THE QUESTION",
+        "WHEELIE"
+      ]
+    }
+  ]
+}
