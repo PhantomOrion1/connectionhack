@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-28",
+  "id": 1379,
+  "editor": "Wyna Liu",
+  "words": [
+    "FOOD",
+    "FUDGE",
+    "CHERRY",
+    "HEM",
+    "DARN",
+    "SKIRT",
+    "NUTS",
+    "BAR",
+    "MUSIC",
+    "BELL",
+    "MATE",
+    "BORDER",
+    "BLAST",
+    "PATCH",
+    "RIM",
+    "SEVEN"
+  ],
+  "groups": [
+    {
+      "title": "MILD OATHS",
+      "words": [
+        "BLAST",
+        "DARN",
+        "FUDGE",
+        "NUTS"
+      ]
+    },
+    {
+      "title": "EDGE",
+      "words": [
+        "BORDER",
+        "HEM",
+        "RIM",
+        "SKIRT"
+      ]
+    },
+    {
+      "title": "SYMBOLS ON A SLOT MACHINE",
+      "words": [
+        "BAR",
+        "BELL",
+        "CHERRY",
+        "SEVEN"
+      ]
+    },
+    {
+      "title": "SOUL ___",
+      "words": [
+        "FOOD",
+        "MATE",
+        "MUSIC",
+        "PATCH"
+      ]
+    }
+  ]
+}
